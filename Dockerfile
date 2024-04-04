@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/Lusqinha/VP-Faturamento.git
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r VP-Faturamento/requirements.txt
 
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "VP-Faturamento/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
